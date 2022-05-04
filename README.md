@@ -14,4 +14,4 @@
 </ul>
 
 <h1>Data Model</h1>
-<img src="https://user-images.githubusercontent.com/92351358/166514815-b2a3c7f7-e7b1-4a6a-a225-6fc01d45f624.png" alt="data model" />
+<img src="https://user-images.githubusercontent.com/92351358/166633148-fa7981d4-9c6e-4f2e-82a5-455bf07c3c39.png" alt="data model"_ />_
