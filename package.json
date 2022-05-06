@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "dotenv": "^16.0.0",
+    "googleapis": "^100.0.0",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "react": "^18.1.0",

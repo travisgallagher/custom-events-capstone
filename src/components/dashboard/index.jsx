@@ -1,8 +1,13 @@
+// @ts-nocheck
 import React from 'react'
+import Calendar from '../calendar'
+import "./index.css"
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className='dash-container'>
+      <Calendar />
+    </div>
   )
 }
 

@@ -1,6 +1,5 @@
 .App{
- 
-background-image: linear-gradient(to left top, #6b7b93, #486da7, #205cb8, #0047c4, #0f2ac9);
+  background-image: linear-gradient(to right top, #6b7b93, #486da7, #205cb8, #0047c4, #0f2ac9);
   width: 100vw;
   height: 100vh;
 }
