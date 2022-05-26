@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./index.css"
 
-const Payroll = () => {
+export const Payroll = ({setPageTitle}) => {
+  useEffect(() => {
+    setPageTitle('Payroll');
+  },[]);
   return (
     <div>Payroll</div>
   )
 }
-
-export default Payroll

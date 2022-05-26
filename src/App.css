@@ -1,5 +1,38 @@
+body {
+  overflow: hidden;
+}
 .App{
   background-image: linear-gradient(to right top, #6b7b93, #486da7, #205cb8, #0047c4, #0f2ac9);
   width: 100vw;
   height: 100vh;
+}
+
+.page {
+  position: absolute;
+  top: 85px;
+  height: 100%;
+  width: 100%;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  padding: 1px;
+  color: white;
+  z-index: 0;
+  border-bottom: black 2px solid;
+}
+.pageHeader svg {
+  position: absolute;
+  left: 27px;
+  top: 29px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

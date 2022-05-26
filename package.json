@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "googleapis": "^100.0.0",
     "pg": "^8.7.3",
@@ -23,6 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "startServer": "nodemon server",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

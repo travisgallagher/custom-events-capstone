@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./Signin.css"
 
 
-const Profile = () => {
+export const Profile = ({setPageTitle}) => {
   const { user, isAuthenticated, isLoading } = useAuth0();
+  useEffect(() => {
+    setPageTitle('Profile');
+  },[])
 
   if (isLoading) {
     return <div>Loading ...</div>;
@@ -20,5 +23,3 @@ const Profile = () => {
     )
   );
 };
-
-export default Profile;

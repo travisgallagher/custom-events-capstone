@@ -1,12 +1,23 @@
+
+*:focus {
+  outline: 0!important;
+}
+*:active {
+  outline: 0!important;
+}
 body {
     margin: 0;
     padding: 0;
+    
   }
   .hidden {
     visibility: hidden;
   }
   
   .nav {
+    position: absolute;
+    left: 0;
+    top: 0;
     background:#E8E8E8;
     font-size: x-large;
     position: absolute;
@@ -17,6 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     transition: ease-in-out 0.3s;
+    z-index: 20;
   }
   .navHeader {
     display: flex;
@@ -33,6 +45,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    overflow: hidden;
   }
   .link {
     display: flex;
@@ -45,10 +58,12 @@ body {
     margin: 4px;
     margin-left: 24px;
     width: 100%;
+    overflow: hidden;
   }
   .link:hover {
     background: #486da7;
-    width: 70%;
+    color: white;
+    width: 100%;
   }
   .link svg {
     margin-right: 12px;

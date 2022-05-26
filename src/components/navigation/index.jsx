@@ -1,23 +1,19 @@
 // @ts-nocheck
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React  from "react";
+import { useNavigate } from "react-router-dom";
 import "./index.css";
-import { BsList, BsX, BsFillPeopleFill, BsFillCalendarEventFill } from 'react-icons/bs';
+import { BsX, BsFillPeopleFill, BsFillCalendarEventFill } from 'react-icons/bs';
 import { AiFillDashboard,  } from 'react-icons/ai';
 import { FaMoneyBillAlt, FaSignOutAlt } from "react-icons/fa";
 import { useAuth0 } from "@auth0/auth0-react";
 
 
-export const NavBar = () => {
-    
-    const [toggle, setToggle] = useState(true); 
-    const { logout } = useAuth0();
-    const { user } = useAuth0();
+export const NavBar = ({toggle,setToggle}) => {
+    const { logout, user } = useAuth0();
     const navigate = useNavigate();
 
   return (
     <div className="nav-bar">
-    <BsList size={35} fill="black" onClick={() => setToggle(!toggle)} style={{position: "absolute", left:"12px", top:"12px", cursor: "pointer"}}/>
         <div className={`nav ${!toggle && "hidden"}`}>
             <BsX style={{ position: "absolute", right:"12px", top: "12px", cursor: "pointer" }}
                 onClick={() => setToggle(!toggle)}
@@ -31,7 +27,7 @@ export const NavBar = () => {
 
             <div className="links">
 
-                <div className="link" onClick={() => navigate("/")}>
+                <div className="link" onClick={() => navigate("/dashboard")}>
                     <AiFillDashboard />
                     <h6>Dashboard</h6>
                 </div>

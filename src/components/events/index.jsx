@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./index.css"
 
-function events() {
+export const Events = ({setPageTitle}) => {
+  useEffect(() => {
+    setPageTitle('Events');
+  },[]);
   return (
     <div>events</div>
   )
 }
-
-export default events

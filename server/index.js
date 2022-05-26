@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const cors = require('cors')
+
 const {SERVER_PORT} = process.env
 
 const {getEvents, createEvent, deleteEvent, getEmployees, createEmployee, deleteEmployee} = require('./controller.js')
