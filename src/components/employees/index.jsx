@@ -7,6 +7,7 @@ export const Employees = ({setPageTitle}) => {
   const [lname, setLname] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [isPartTime, setIsPartTime] = useState(true);
   const [employees, setEmployees] = useState([]);
 
 const clearForm = () => {
@@ -14,6 +15,7 @@ const clearForm = () => {
   setLname('');
   setEmail('');
   setPhone('');
+  setIsPartTime(true);
 };
 
 const handleGetEmployees = async () => {
@@ -53,7 +55,7 @@ const handleDeleteEmployee = async (employee) => {
       state:"", 
       zipcode:0, 
       empPay:20,
-      isPartTime:true,
+      isPartTime:isPartTime,
       isEventManager: false,
     }
     try {
@@ -77,7 +79,7 @@ const handleDeleteEmployee = async (employee) => {
       <div className='employeesContainer'>
       <h1>Employees</h1>
 
-        {employees.length > 0 &&
+        {employees.length > 0 ?
           employees.map((e, i) => (
           <div className='employees' key={i}>
             <div className='employee'>
@@ -88,7 +90,7 @@ const handleDeleteEmployee = async (employee) => {
                 <button onClick={() => handleDeleteEmployee(e)}>Delete Employee</button>
             </div>
           </div>
-          ))
+          )) : <h2>No Employees. . .</h2>
         }
       </div>
     </div>
@@ -107,6 +109,10 @@ const handleDeleteEmployee = async (employee) => {
         </div>
         <div className="formField">
           <input onChange={e => setPhone(e.target.value)} value={phone} placeholder='phone number' type="phone" name="phone" id="phone" required/>
+        </div>
+        <div style={{flexDirection:'initial'}} className="formField">
+        <label style={{marginRight:'24px'}} htmlFor='isPartTime'>Is part time</label>
+          <input onChange={e => setIsPartTime(e.target.checked)} checked={isPartTime} placeholder='Is Part Time' type="checkbox" name="isPartTime" id="isparttime" />
         </div>
         <button  onSubmit={handleCreateEmployee} type='submit'>Submit</button>
     </form>
